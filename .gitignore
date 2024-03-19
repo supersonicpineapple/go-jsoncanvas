@@ -1,0 +1,36 @@
+dist/*
+
+# source of the block below
+# https://github.com/github/gitignore
+### Go.gitignore
+# Binaries for programs and plugins
+*.exe
+*.exe~
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Go workspace file
+go.work
+
+### Global/macOS.gitignore
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Global/VisualStudioCode.gitignore
+.vscode/*
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### Global/JetBrains.gitignore
+# User-specific stuff
+.idea/*
