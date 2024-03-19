@@ -37,7 +37,7 @@ func (n *Node) Validate() error {
 		return fmt.Errorf("invalid node type: %s", n.Type)
 	}
 
-	if n.Type == "text" && (n.Text == nil || *n.Text == "") {
+	if n.Type == "text" && n.Text == nil {
 		return fmt.Errorf("text type node requires text attribute")
 	} else if n.Type == "file" && (n.File == nil || *n.File == "") {
 		return fmt.Errorf("file type node requires file attribute")
