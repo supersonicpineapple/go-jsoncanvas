@@ -2,6 +2,8 @@ package canvas
 
 import (
 	"fmt"
+
+	"github.com/supersonicpineapple/go-jsoncanvas/util"
 )
 
 type Edge struct {
@@ -30,4 +32,15 @@ func (e *Edge) Validate() error {
 	}
 
 	return nil
+}
+
+func NewEdge(from, to *Node, fromSide, toSide string) *Edge {
+	e := Edge{
+		ID:       util.NewID(),
+		FromNode: from.ID,
+		FromSide: &fromSide,
+		ToNode:   to.ID,
+		ToSide:   &toSide,
+	}
+	return &e
 }

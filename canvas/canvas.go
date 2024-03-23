@@ -10,6 +10,10 @@ type Canvas struct {
 	Edges []*Edge `json:"edges"`
 }
 
+func NewCanvas() *Canvas {
+	return &Canvas{}
+}
+
 func (c *Canvas) Validate() error {
 	if c == nil {
 		return nil
@@ -44,4 +48,14 @@ func joinErrors(errors []error) string {
 	}
 
 	return sb.String()
+}
+
+func (c *Canvas) AddNodes(nodes ...*Node) *Canvas {
+	c.Nodes = append(c.Nodes, nodes...)
+	return c
+}
+
+func (c *Canvas) AddEdges(edges ...*Edge) *Canvas {
+	c.Edges = append(c.Edges, edges...)
+	return c
 }
